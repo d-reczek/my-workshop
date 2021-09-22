@@ -1,0 +1,18 @@
+ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+li,
+a {
+  list-style-type: none;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.links a {
+  color: black;
+}
+.link-1 {
+  flex-grow: 1;
+}

@@ -1,0 +1,19 @@
+h1 {
+  font-size: 40px;
+  color: $font-color;
+  border: 3px solid pink;
+  display: inline-block;
+}
+h2 {
+  color: red;
+}
+
+.div {
+  background-color: $bg-color;
+  p {
+    color: orange;
+  }
+  strong {
+    color: green;
+  }
+}

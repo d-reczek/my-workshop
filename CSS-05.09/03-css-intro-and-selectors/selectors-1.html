@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="selectors.css">
+    <style>
+        * {
+            color: purple;
+            margin-block-start: 0em;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        p {
+            color: green;
+        }
+
+        #super-text {
+            color: blue;
+
+        }
+
+        .text {
+            color: red;
+        }
+
+        .important {
+            color: green !important;
+        }
+
+        .btn {
+            padding: 15px;
+            border: 1px solid black;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .btn-green {
+            background-color: green;
+            color: white;
+        }
+
+        .btn-danger {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <p style="color: red;">Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p class="text">Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p class="text important" id="super-text" style="color: purple;">Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p class="text">Lorem ipsum dolor sit amet.</p>
+    <h2 class="text">Nagłówek</h2>
+    <a href="https://google.com">Google com</a>
+    <button class="btn btn-green">Kup</button>
+    <button class="btn">Cofnij</button>
+    <button class="btn btn-danger">Usuń</button>
+</body>
+
+</html>

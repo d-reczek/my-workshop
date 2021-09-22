@@ -1,0 +1,235 @@
+@import url(reset.css);
+@import url(ramka.css);
+
+html {
+    background: #fec106 url(assets/tlo.jpg) fixed no-repeat;
+    background-size: contain;
+    font-size: 62.5%;
+    font-family: 'Playfair Display', serif;
+    color: color: #48504e;
+    
+}
+
+
+.orange { color: #fec106; }
+.grey {color: #48504e;}
+.ligthgrey {color: #dfdcde;}
+
+h1 { 
+    font-size: 3.7rem; 
+    background-color: rgba(255, 255, 255, .9);
+    padding: 3.5rem;
+    margin: 4rem; 
+    display: inline-block;
+    border-top-left-radius: 2rem;
+}
+
+h2 { 
+    font-size: 2.7rem; 
+}
+
+h3 {
+    font-size: 3.1rem; 
+}
+
+h3, h2 {
+   
+    color: #fff;  
+    background-color: #48504e;
+    padding: 1.5rem;
+    display: inline-block;
+}
+
+h4 {
+    font-size: 2rem;
+    padding: 2rem 1rem;
+}
+  
+p {font-size: 1.8rem; line-height: 1.55;} 
+
+ul {font-size: 2.03rem; line-height: 1.75;}
+
+footer p {1.4rem; color: #dfdcde;}
+strong {
+    font-weight: bold;
+}
+
+.summary {
+    font-size: 2.4rem;
+    font-style: italic;
+}
+
+em {
+    background-color: rgba(255, 255, 255, .8);
+}
+
+.dot {
+    width: 1rem;
+    height: 1rem;
+    background-color: #48504e;
+    margin: 3rem auto;
+    border-radius: 2rem;
+}
+
+.deleted {
+    text-decoration: line-through;
+}
+
+.button-more {
+    display: inline-block;
+    border: 1px dashed #000;
+    font-size: 3rem;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+}
+
+.menu {
+    background: #fff url(assets/menu.svg)  center no-repeat;
+    padding: 1rem;
+    margin: 1rem;
+    height: 3.2rem;
+    position: fixed;
+    width: 3.2rem;
+    right: 0;
+    z-index: 9999;
+}
+.hoverme:hover header {
+    display: block;
+}
+
+form {
+    float: left; 
+    width: 35rem;
+}
+
+button {
+    background: #fec106;
+    border: none;
+    padding: 2rem 6rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+    margin-top: -1.5rem;
+    margin-right: -3rem;
+}
+
+input, textarea {
+    width: 35rem;
+    background: none;
+    border: 2px #dfdcde solid;
+    margin: 0.5rem;
+    padding: 1rem;
+    color: #fff;
+    font-size: 1.7rem;
+}
+
+header {
+    display: none;
+    background: #48504e;
+    color: #fff;
+    height: 30rem;
+    padding: 10rem;
+}
+ 
+
+nav {
+    float: right;
+}
+
+nav li {
+    text-align: right;
+    background: url(assets/strzalka.svg) right no-repeat;
+    padding-right: 4rem;
+    line-height: 1.5rem;
+    margin: 3rem;
+    
+}
+
+
+section {
+    
+    width: 50%;
+    min-width: 600px;
+    max-width: 850px;
+    position: absolute;
+    right: 5%;
+}
+
+article {
+    margin-bottom:  4rem;
+}
+
+hgroup {
+    margin-left: -25%;
+    position: relative;
+    display: inline-block;
+}
+
+h3 {
+    position: absolute;
+    right: 0;
+    bottom: 25%;
+}
+
+
+figure {
+    margin-left: -25%;
+    float: left;
+    margin-top: 20%;
+}
+
+.text {
+    padding-top: 4rem;
+    column-count: 2; 
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 1rem;
+    background: #fff;
+}
+
+@media all and (max-width: 1280px) {
+    
+    html {
+         background: #ffc107;
+    }
+    section {
+        width: 75%;
+    }
+    
+    .bg {
+        background: url(assets/bg.jpg) fixed no-repeat;
+        height: 300px;
+    }
+    
+    figure {
+        display: none;
+    }
+    
+}
+
+@media all and (max-width: 768px) {
+    hgroup {
+    margin-left: 0;
+}
+    figure {
+        display: none;
+    }
+    section {
+    width: 90%;
+    min-width: 300px;
+    right: 5%;
+}
+    .text {
+    column-count: 1;
+}
+    
+}
+
+

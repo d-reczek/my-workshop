@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header h2 {
+            color: green;
+        }
+
+        header>h2 {
+            color: red;
+        }
+
+        p~p {
+            color: orange;
+        }
+
+        [href="https://google.com"] {
+            text-decoration: none;
+            color: black;
+        }
+
+        [href^="https://"]:hover {
+            text-decoration: underline;
+        }
+
+        h2:first-child {
+            color: purple;
+        }
+
+        h2:last-child {
+            color: aqua;
+        }
+
+        li:nth-child(2n + 1) {
+            color: red;
+        }
+
+        li:first-child::first-letter {
+            font-size: 50px;
+        }
+
+        .test h2:last-of-type {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h2>asd1</h2>
+            <p>asd</p>
+        </div>
+        <h2>asd2</h2>
+    </header>
+    <div>
+        <h2>asd3</h2>
+        <p>asd</p>
+    </div>
+    <p>asd</p>
+    <p>ad</p>
+    <p>ad</p>
+    <div></div>
+    <p>ad</p>
+    <p>ad</p>
+    <p>ad</p>
+    <a class="test" href="https://google.com">asdasd</a>
+    <ul>
+        <li>test 1</li>
+        <li>test 2</li>
+        <li>test 3</li>
+        <li>test 4</li>
+        <li>test 5</li>
+    </ul>
+
+    <div class="test">
+        <p>lorem5</p>
+        <p>lorem5</p>
+        <p>lorem5</p>
+        <h2>asdasd</h2>
+        <p>lorem5</p>
+        <h2>asda</h2>
+        <p>lorem5</p>
+    </div>
+</body>
+
+</html>

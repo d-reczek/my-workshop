@@ -1,0 +1,477 @@
+@import url(reset.css);
+
+
+
+html {
+    background: #8698B0 url(assets/tlo2.jpg) fixed no-repeat;
+    background-position: right;
+    background-size: contain;
+    font-size: 62.5%;
+    font-family: 'Playfair Display', serif;
+    color: color: #48504e;
+    
+}
+.tlo { color: #8698B0 }
+
+h1 { 
+    margin: 80px 0 50px 20px;
+    font-size: 3.7rem; 
+    background-color: #fff;
+    padding: 2rem;
+    display: inline-block;
+    border-bottom-right-radius:  0.5rem;
+    border-top-left-radius:  0.5rem;
+    width: 68%;
+    
+    
+}
+
+ h2 {      
+     color: #000;
+     background-color: #394F5B;  
+     padding: 1.4rem;
+     border-radius:  0.5rem;
+     display: inline-block;
+     position: absolute;
+     margin: 10px;
+    }
+
+h3 {  
+    color: #000;
+    background-color: #394F5B;  
+    padding: 1.4rem;
+    border-radius:  0.5rem;
+    position: absolute;
+    margin: 10px;
+}
+h4 {
+    color: #000;
+    background-color: #394F5B;  
+    padding: 1.4rem;
+    border-radius:  0.5rem;
+    position: absolute;
+    margin: 10px;
+    
+} 
+h5 {
+    color: #000;
+    float: right;
+    margin: 25px 39.5% 0 0;
+   
+}
+
+.form {
+        font-size: 2rem;
+        width: 35rem;
+        float: right;
+        margin: 5px 40% 0 0;
+    
+}
+
+input, textarea {
+        margin: 5px;
+        width: 35rem;
+        border: solid 1px black;
+    
+}
+button {
+        color: #fff;
+        float: right;
+        background-color: #394F5B;
+        width: 150px;
+        height: 30px;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+    
+}
+
+
+.headlines {
+            font: #fff;
+            font-size: 2.5rem;
+            width: auto; 
+}
+    
+
+.menu {
+   background: #fff url(assets/menu.svg)  center no-repeat;
+    padding: 1rem;
+    margin: 1rem;
+    height: 3.2rem;
+    position: fixed;
+    width: 3.2rem;
+    left: 0;
+    z-index: 9999;
+    
+}
+
+.description {
+    
+    width: 71.3%;
+    font-size: 1.8rem;
+    column-count: 2;
+    position: relative;
+    display: inline-block;
+    margin: 70px 0 0 20px;
+    
+}
+
+header {
+        border-bottom: solid 0.3rem black;
+        display: none;
+        font-size: 1.5rem;
+        background: #8698B0;
+        color: #fff;
+        height: 25rem;
+        
+}
+    
+ nav {
+        float: left;
+        
+    }
+nav li {
+    font-size: 2rem;
+    text-align: left;
+    background: url(assets/kropka.svg) left no-repeat;
+    padding-left: 3rem;
+    line-height: 2rem;
+    margin: 0px 0 10px 80px;
+    
+}
+
+ul {
+    position: absolute;
+}
+
+section {
+    
+clear: left;
+}
+
+.hoverme:hover header {
+    display: block;
+}
+
+a{
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #fff;
+    font-size: 3rem;
+    padding: 1.5rem;
+}
+
+a:visited{
+	color: #000;
+    text-decoration: none;
+}
+
+a:active{
+	color: red;
+    text-decoration: none;
+}
+.myphoto {
+    float: left;
+    border-radius: .5rem; 
+    padding: 2.5px;
+    margin: 2.5px;
+    
+}
+
+.hideform {
+     color: #000;
+    font-size: 1.5rem;
+}
+.formstyle {
+    font-size: 1.5rem;
+}
+
+footer {
+    margin-top: 5px;
+        padding: 1rem;
+        background: #fff;
+}
+
+@media all and (max-width: 1200px) {
+    
+    h1 { 
+    width: 59%
+    }
+    
+    .description {
+    
+    width: 63%;
+        
+}
+       
+    }
+
+@media all and (max-width: 1000px) {
+    
+    html {
+        background: #8698B0;
+    }
+    header {
+        margin: 25px 0 0 0;
+        height: 10rem;
+        
+}
+    
+    
+    .description {
+    
+    width: 95%;
+    column-count: 1;
+        
+}
+       .hideform {
+            display: none;
+        }
+    }
+
+
+    
+    @media all and (max-width: 400px) {
+    
+    html {
+        background: #8698B0;
+    }
+    
+    .description {
+    
+    width: 90%;
+    column-count: 1;
+        
+}
+       .hideform {
+            display: none;
+        }
+    }
+    
+/*
+.orange { color: #fec106; }
+.grey {color: #48504e;}
+.ligthgrey {color: #dfdcde;}
+
+h1 { 
+    font-size: 3.7rem; 
+    background-color: rgba(255, 255, 255, .9);
+    padding: 3.5rem;
+    margin: 0rem; 
+    display: inline-block;
+    border-radius:  2rem;
+        
+}
+
+h2 { 
+    font-size: 2.7rem; 
+}
+
+h3 {
+    font-size: 3.1rem; 
+}
+
+h3, h2 {
+    color: #fff;  
+    background-color: #48504e;
+    padding: 1.5rem;
+    display: inline-block;
+}
+
+h4 {
+    font-size: 2rem;
+    padding: 2rem 1rem;
+}
+  
+p {font-size: 1.8rem; line-height: 1.55;} 
+
+ul {font-size: 2.03rem; line-height: 1.75;}
+
+footer p {1.4rem; color: #dfdcde;}
+strong {
+    font-weight: bold;
+}
+
+.summary {
+    font-size: 2.4rem;
+    font-style: italic;
+}
+
+em {
+    background-color: rgba(255, 255, 255, .8);
+}
+
+.dot {
+    width: 1rem;
+    height: 1rem;
+    background-color: #48504e;
+    margin: 3rem auto;
+    border-radius: 2rem;
+}
+
+.deleted {
+    text-decoration: line-through;
+}
+
+.button-more {
+    display: inline-block;
+    border: 1px dashed #000;
+    font-size: 3rem;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+}
+
+.menu {
+    background: #fff url(assets/menu.svg)  center no-repeat;
+    padding: 1rem;
+    margin: 1rem;
+    height: 3.2rem;
+    position: fixed;
+    width: 3.2rem;
+    right: 0;
+    z-index: 9999;
+}
+.hoverme:hover header {
+    display: block;
+}
+
+form {
+    float: left; 
+    width: 35rem;
+}
+
+button {
+    background: #fec106;
+    border: none;
+    padding: 2rem 6rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+    margin-top: -1.5rem;
+    margin-right: -3rem;
+}
+
+input, textarea {
+    width: 35rem;
+    background: none;
+    border: 2px #dfdcde solid;
+    margin: 0.5rem;
+    padding: 1rem;
+    color: #fff;
+    font-size: 1.7rem;
+}
+
+header {
+    display: none;
+    background: #48504e;
+    color: #fff;
+    height: 30rem;
+    padding: 10rem;
+}
+ 
+
+nav {
+    float: right;
+}
+
+nav li {
+    text-align: right;
+    background: url(assets/strzalka.svg) right no-repeat;
+    padding-right: 4rem;
+    line-height: 1.5rem;
+    margin: 3rem;
+    
+}
+
+
+section {
+    
+    width: 100%
+    min-width: 600px;
+    max-width: 850px;
+    position: absolute;
+    right: 5%;
+}
+
+article {
+    margin-bottom:  4rem;
+}
+
+hgroup {
+    width: 100% auto;
+    position: absolute;
+    display: inline-block;
+}
+
+h3 {
+    position: absolute;
+    right: 0;
+    bottom: 25%;
+}
+
+
+figure {
+    margin-left: -25%;
+    float: left;
+    margin-top: 20%;
+}
+
+.text {
+    padding-top: 4rem;
+    column-count: 2; 
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 1rem;
+    background: #fff;
+}
+
+@media all and (max-width: 1280px) {
+    
+    html {
+         background: #ffc107;
+    }
+    section {
+        width: 75%;
+    }
+    
+    .bg {
+        background: url(assets/bg.jpg) fixed no-repeat;
+        height: 300px;
+    }
+    
+    figure {
+        display: none;
+    }
+    
+}
+
+@media all and (max-width: 768px) {
+    hgroup {
+    margin-left: 0;
+}
+    figure {
+        display: none;
+    }
+    section {
+    width: 90%;
+    min-width: 300px;
+    right: 5%;
+}
+    .text {
+    column-count: 1;
+}
+    
+}
+
+*/

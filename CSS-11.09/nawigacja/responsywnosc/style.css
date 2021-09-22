@@ -1,0 +1,9 @@
+body {
+  font-size: 40px;
+}
+
+@media (min-width: 400px) {
+  body {
+    font-size: 60px;
+  }
+}

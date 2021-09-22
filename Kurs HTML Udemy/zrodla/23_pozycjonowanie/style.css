@@ -1,0 +1,29 @@
+@import url(importme.css);
+
+.jeden {
+    position: relative; 
+    top: 20px;
+    left: 80px;
+    top: 100px;
+    z-index: 1;
+}
+
+.dwa {
+    position: absolute;
+    left: 50px;  
+    top: 520px;
+}
+
+.dziecko{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: black;
+    top: 20px;
+    left: 20px;
+}
+
+.trzy {
+    position: fixed;
+    top: 20px;
+}

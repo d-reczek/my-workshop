@@ -1,0 +1,15 @@
+@import url(importme.css);
+
+html {
+    font-size: 62.5%;
+}
+
+p { 
+    font-size: 4rem;
+    padding: 2rem;
+    color: #000000;
+    font-family: 'Arial', 'Tahoma', sans-serif;
+}
+.dwa{
+    color: #ffffff;
+}
