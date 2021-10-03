@@ -67,3 +67,21 @@ Korzystamy z takich samych selektorów jak w przypadku css np. [atrybut], .klasa
 ## I wykorzystujemy jedną z podanych wyżej metod
 
 > element.after(moveElement)
+
+## Praca z konsolą
+
+### Jest wiele możliwości korzystania z konsoli my skupimy się przede wszystkim na console.log oraz na console.dir
+
+### Ważne! W przypadku typów złożonych w konsoli mamy dostęp do referencji danego elementu (czyli jego aktualnego stanu a nie stanu na moment wywołania console.log)
+
+## Wywołanie console.log
+
+> console.log(element | obiekt | tablica | itd.);
+
+## Wywołanie console.dir przydatne np. w przypadku badania elementu drzewa DOM
+
+> console.dir(element);
+
+---
+
+# EVENTS
