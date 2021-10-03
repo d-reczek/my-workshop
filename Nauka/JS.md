@@ -85,3 +85,21 @@ Korzystamy z takich samych selektorów jak w przypadku css np. [atrybut], .klasa
 ---
 
 # EVENTS
+
+## Reakcja na kliknięcie
+
+> click
+
+> np. addEventListener('click', ...)
+
+## Reakcja na klikniecie przyciskut z atrybutem `submit`
+
+> submit
+
+> np. addEventListener('submit', ...)
+
+## Reakcja na poruszanie kursorem myszki
+
+> mousemove
+
+> np. addEventListener('mousemove', ...)
