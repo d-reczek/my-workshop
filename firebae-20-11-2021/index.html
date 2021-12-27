@@ -1,0 +1,134 @@
+<head>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            border: solid 1px #ccc;
+            padding: 10px;
+            height: 80vh;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        input {
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 4em;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <strong>Anonymous</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem magnam enim
+            placeat
+            deserunt asperiores corporis velit adipisci iste a perspiciatis temporibus totam nulla, voluptas rem
+            sapiente eum
+            tempora dolor. Ullam!
+        </li>
+        <li>
+            <strong>Anonymous</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem magnam enim
+            placeat
+            deserunt asperiores corporis velit adipisci iste a perspiciatis temporibus totam nulla, voluptas rem
+            sapiente eum
+            tempora dolor. Ullam!
+        </li>
+        <li>
+            <strong>Anonymous</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem magnam enim
+            placeat
+            deserunt asperiores corporis velit adipisci iste a perspiciatis temporibus totam nulla, voluptas rem
+            sapiente eum
+            tempora dolor. Ullam!
+        </li>
+    </ul>
+    <form>
+        <input placeholder="Your username" />
+        <div></div>
+        <textarea placeholder="Your message"></textarea>
+    </form>
+    <!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
+
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.3.0/firebase-app.js'
+
+        // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
+        // import { analytics } from 'https://www.gstatic.com/firebasejs/9.3.0/firebase-analytics.js'
+
+        // Add Firebase products that you want to use
+        // import { auth } from 'https://www.gstatic.com/firebasejs/9.3.0/firebase-auth.js'
+        import { getFirestore, collection, addDoc, getDocs, query, orderBy } from 'https://www.gstatic.com/firebasejs/9.3.0/firebase-firestore.js'
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyC_nvtZiY9wDWezB5qBvrVvInC9tSFd02A",
+            authDomain: "jfdzr5-20145.firebaseapp.com",
+            projectId: "jfdzr5-20145",
+            storageBucket: "jfdzr5-20145.appspot.com",
+            messagingSenderId: "807092412989",
+            appId: "1:807092412989:web:0d47cdf14220dc1a790054"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore();
+
+        const formNode = document.querySelector('form');
+        const textareaNode = document.querySelector('textarea');
+        textareaNode.addEventListener('keydown', (e) => {
+            if (e.keyCode === 13) {
+                e.preventDefault();
+                submit();
+                textareaNode.value = '';
+            }
+        })
+
+        const submit = async () => {
+            const name = document.querySelector('input').value;
+            const content = document.querySelector('textarea').value;
+            const docRef = await addDoc(collection(db, "messages"), {
+                name: name,
+                content: content,
+                timestamp: +new Date(),
+            });
+            fetch();
+        }
+
+        const fetch = async () => {
+            const collectionRef = collection(db, "messages")
+            const q = query(collectionRef, orderBy("timestamp"));
+            const querySnapshot = await getDocs(q);
+
+            // clear old messages
+            const ulNode = document.querySelector('ul');
+            ulNode.innerHTML = '';
+
+            querySnapshot.forEach((doc) => {
+                const data = doc.data();
+                const liNode = document.createElement('li');
+                liNode.innerHTML = `<strong>${data.name}:</strong> ${data.content}`;
+                ulNode.appendChild(liNode);
+            });
+        }
+        fetch();
+
+        setInterval(fetch, 1000);
+
+      // formNode.addEventListener('submit', async (e) => {
+      //   e.preventDefault();
+      //   alert('submit')
+
+      // })
+
+
+
+    </script>
+</body>

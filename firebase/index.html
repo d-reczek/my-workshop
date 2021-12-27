@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase</title>
+</head>
+
+<body>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBU0JvgTLCTVAp4ZQZtdAzE4S73YZ3dEug",
+            authDomain: "fir-workshop-4feef.firebaseapp.com",
+            projectId: "fir-workshop-4feef",
+            storageBucket: "fir-workshop-4feef.appspot.com",
+            messagingSenderId: "1004519223493",
+            appId: "1:1004519223493:web:a104ef320fcb5ec6cf40ac"
+        };
+        import { getFirestore, collection, addDoc, doc, onSnapshot, query, where, } from "https://www.gstatic.com/firebasejs/9.5.0/firebase-firestore.js"
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore();
+        const mailsRef = collection(db, "mails")
+
+        const form = document.querySelector("form")
+        form.addEventListener('submit', async e => {
+            e.preventDefault()
+            const inputValue = document.querySelector('input').value
+            console.log(inputValue)
+
+            const docRef = await addDoc(mailsRef, {
+                mail: inputValue,
+            });
+            console.log("Document written with ID: ", docRef.id);
+            form.reset()
+        })
+        // const q = query(collection(db, "mails"), where("mail"));
+        const listDiv = document.querySelector('.list')
+        onSnapshot(mailsRef, snapshot => {
+            const mailsArray = []
+
+            snapshot.forEach(element => {
+                mailsArray.push(element.data().mail)
+
+
+                const lastItem = mailsArray[mailsArray.length - 1]
+
+                console.log(lastItem)
+                const newDiv = document.createElement("div")
+                newDiv.innerText = lastItem
+                listDiv.appendChild(newDiv)
+            });
+
+
+
+
+
+
+
+
+
+
+            // console.log(mailsArray);
+
+
+        })
+        // const unsubscribe = onSnapshot(q, (querySnapshot) => {
+        //     const cities = [];
+        //     querySnapshot.forEach((doc) => {
+        //         cities.push(doc.data().name);
+        //     });
+        //     console.log("Current cities in CA: ", cities.join(", "));
+        // });
+
+    </script>
+
+    <form>
+        <input type="text" placeholder="mail">
+        <button type="submit">Wyślij</button>
+    </form>
+    <div class="list">
+        LISTA
+    </div>
+</body>
+
+</html>
