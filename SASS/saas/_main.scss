@@ -1,0 +1,46 @@
+@mixin flex {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin main-border-radius($one: 20px, $two: $one, $three: $one, $four: $one) {
+  border-radius: $one $two $three $four;
+}
+
+@mixin content {
+  text-transform: uppercase;
+  @content;
+}
+
+%placeholder {
+  width: 90%;
+  margin: 0 auto;
+}
+body {
+  @extend %placeholder;
+}
+
+.navigation {
+  margin: map-get($object, main);
+  padding: $array;
+  background-color: $bcg-color;
+  @include flex();
+  border-radius: $main-border-radius;
+  @include content() {
+    font-size: 2rem;
+  }
+  background-color: lighten(red, 30%);
+  background-color: darken(red, 30%);
+  @extend %placeholder;
+  &__list {
+    color: lighten($main-color, 25%);
+    background-color: yellow;
+    @include main-border-radius(30px, 20px, 40px, 120px);
+  }
+  &__list-item {
+    color: red;
+    list-style: none;
+    font-size: 2rem;
+    @extend .navigation;
+  }
+}
